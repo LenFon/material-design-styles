@@ -28,9 +28,21 @@ material-design-styles/
 
 ## 安装方式
 
-本技能是 WorkBuddy 的自定义技能（含 `SKILL.md` + `references/`）。两种安装途径：
+本技能托管在 GitHub，推荐直接在 WorkBuddy 对话框里安装，无需手动复制文件。
 
-### 方式一：手动安装（从本仓库获取，推荐）
+### 方式一：通过 WorkBuddy 对话框安装（推荐）
+
+1. 复制本仓库地址：`https://github.com/LenFon/material-design-styles`
+2. 在 WorkBuddy 对话框中发送安装指令，例如：
+
+   > 安装这个技能：https://github.com/LenFon/material-design-styles
+
+   或直接描述需求（如“从 GitHub 安装 material-design-styles 技能”），WorkBuddy 会自动从仓库拉取并安装到用户级技能目录。
+3. 安装完成后，在任意对话中输入 `@skill:material-design-styles` 即可调用。
+
+> 安装位置默认为用户级技能目录 `~/.workbuddy/skills/material-design-styles/`，对所有项目可用。
+
+### 方式二：手动安装（对话框不可用时）
 
 1. 获取仓库：
 
@@ -45,13 +57,9 @@ material-design-styles/
    - **用户级**（所有项目可用）：`%USERPROFILE%\.workbuddy\skills\material-design-styles\`
    - **项目级**（仅当前项目）：`<你的工作区>\.workbuddy\skills\material-design-styles\`
 
-3. 重启或刷新 WorkBuddy 会话，即可在对话中调用本技能。
+3. 刷新或重启 WorkBuddy 会话，即可在对话中调用本技能。
 
 > 路径说明：Windows 上 `%USERPROFILE%` 即 `C:\Users\<你的用户名>`；复制后文件夹名须保持为 `material-design-styles`（与 `SKILL.md` 中 `name` 一致）。
-
-### 方式二：通过 WorkBuddy 技能市场（若已发布到推荐市场）
-
-在 WorkBuddy 对话中输入 `@skill:marketplace-skill-installer` 或直接描述“安装 material-design-styles 技能”，按提示搜索并安装。
 
 ## 使用方式
 
