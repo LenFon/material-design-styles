@@ -26,9 +26,44 @@ material-design-styles/
 └── .gitignore
 ```
 
-## 用法
+## 安装方式
 
-XAML 中直接引用命名样式：
+本技能是 WorkBuddy 的自定义技能（含 `SKILL.md` + `references/`）。两种安装途径：
+
+### 方式一：手动安装（从本仓库获取，推荐）
+
+1. 获取仓库：
+
+   ```bash
+   git clone https://github.com/LenFon/material-design-styles.git
+   ```
+
+   或直接下载 ZIP 解压。
+
+2. 将 `material-design-styles` 文件夹复制到 WorkBuddy 技能目录之一：
+
+   - **用户级**（所有项目可用）：`%USERPROFILE%\.workbuddy\skills\material-design-styles\`
+   - **项目级**（仅当前项目）：`<你的工作区>\.workbuddy\skills\material-design-styles\`
+
+3. 重启或刷新 WorkBuddy 会话，即可在对话中调用本技能。
+
+> 路径说明：Windows 上 `%USERPROFILE%` 即 `C:\Users\<你的用户名>`；复制后文件夹名须保持为 `material-design-styles`（与 `SKILL.md` 中 `name` 一致）。
+
+### 方式二：通过 WorkBuddy 技能市场（若已发布到推荐市场）
+
+在 WorkBuddy 对话中输入 `@skill:marketplace-skill-installer` 或直接描述“安装 material-design-styles 技能”，按提示搜索并安装。
+
+## 使用方式
+
+### 在 WorkBuddy 对话中调用
+
+- 显式调用：输入 `@skill:material-design-styles` 或 `/material-design-styles`。
+- 自然语言触发：描述如“WPF 按钮用哪个 Material Design 样式”“MD3 输入框怎么写”等需求，WorkBuddy 会自动匹配本技能。
+- 调用后，技能会给出样式选型建议（MD2 / MD3、Raised / Flat / Outlined / FloatingHint / Filled 等变体），并引用 `references/MD样式分类清单.md` 中的命名样式键。
+
+### 在 XAML 中引用命名样式
+
+按技能建议，在 XAML 中以 `StaticResource` 引用命名样式：
 
 ```xml
 <Button Style="{StaticResource MaterialDesignRaisedButton}" />
@@ -40,6 +75,8 @@ XAML 中直接引用命名样式：
 - 扁平无阴影：`MaterialDesignFlatButton`
 - 描边透明底：`MaterialDesignOutlinedButton`
 - 悬浮操作：`MaterialDesignFloatingActionButton`（支持 `Mini` / `Dark` / `Light` / `Secondary` 派生）
+
+> 更多控件（输入框、卡片、菜单、开关等）的命名样式键，见 `references/MD样式分类清单.md`。
 
 ## 许可
 
